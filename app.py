@@ -18,21 +18,20 @@ if uploaded_file:
     st.success("Analysis Complete!")
 
 
+# Assuming your previous code calculated these:
+# match_score = ... (the result of your cosine similarity)
+# category = ... (the result of your ML model prediction)
 
-# 1. Create the Report Content
-report_text = f"""
-ANALYSIS REPORT
+# 1. Create the content using YOUR actual variable names
+report_content = f"AI RESUME ANALYSIS REPORT\n"
+report_content += f"--------------------------\n"
+report_content += f"Predicted Job Role: {category}\n" # Use your real variable here
+report_content += f"ATS Match Score: {match_score}%\n" # Use your real variable here
 
-Predicted Job Role: {predicted_role}
-ATS Match Score: {ats_score}%
-"""
-
-st.divider()
-st.subheader("📥 Export Your Results")
-
+# 2. Add the button
 st.download_button(
     label="Download Analysis Report",
-    data=report_text,
-    file_name="Resume_Analysis_Report.txt",
+    data=report_content,
+    file_name="Resume_Analysis.txt",
     mime="text/plain"
 )
