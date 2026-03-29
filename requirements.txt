@@ -1,0 +1,6 @@
+streamlit
+pandas
+pdfplumber
+scikit-learn
+matplotlib
+wordcloud
