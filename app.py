@@ -23,10 +23,11 @@ predicted_role = "Data Scientist"
 
 # 1. Create the Report Content
 report_text = f"""
-AI RESUME ANALYSIS REPORT
--------------------------
+ANALYSIS REPORT
+
 Predicted Job Role: {predicted_role}
 ATS Match Score: {ats_score}%
+"""
 
 st.divider()
 st.subheader("📥 Export Your Results")
