@@ -16,3 +16,24 @@ uploaded_file = st.file_uploader("Upload your Resume", type="pdf")
 if uploaded_file:
     # Logic to process the PDF and show the score...
     st.success("Analysis Complete!")
+
+
+ats_score = 85 
+predicted_role = "Data Scientist" 
+
+# 1. Create the Report Content
+report_text = f"""
+AI RESUME ANALYSIS REPORT
+-------------------------
+Predicted Job Role: {predicted_role}
+ATS Match Score: {ats_score}%
+
+st.divider()
+st.subheader("📥 Export Your Results")
+
+st.download_button(
+    label="Download Analysis Report",
+    data=report_text,
+    file_name="Resume_Analysis_Report.txt",
+    mime="text/plain"
+)
