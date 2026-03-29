@@ -18,8 +18,6 @@ if uploaded_file:
     st.success("Analysis Complete!")
 
 
-ats_score = 85 
-predicted_role = "Data Scientist" 
 
 # 1. Create the Report Content
 report_text = f"""
